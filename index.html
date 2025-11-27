@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/f30f0231eb.js" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+
+        * {
+            font-family: "Kantumruy Pro", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+
+    <!-- start of navbar -->
+    <div class="navbar sticky top-0 bg-black">
+        <nav class="flex justify-between item-center px-6 py-4">
+            <a href="./day1.html" class="text-3xl font-semibold underline text-white hover:text-red-300">Melodyz.</a>
+
+            <ul class="flex justify-center items-center gap-5">
+                <li><a href="#" class="hover:underline hover:text-red-400 text-white">Home</a></li>
+                <li><a href="#" class="hover:underline hover:text-red-400 text-white">Song</a></li>
+                <li><a href="#" class="hover:underline hover:text-red-400 text-white">New Albums</a></li>
+                <li><a href="#" class="hover:underline hover:text-red-400 text-white">Contact</a></li>
+                <li><a href="#" class="hover:underline hover:text-red-400 text-white">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- end of navbar -->
+
+    <!-- start of hero  -->
+    <section class="w-full h-[570px] px-6 bg-[url(https://plus.unsplash.com/premium_photo-1661963052800-6e6b2aeea937?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]
+            bg-no-repeat bg-size-[100%_100%] bg-cover
+            flex justify-start items-center
+        ">
+        <div class="w-[500px] ms-[80px] p-[20px] rounded-lg bg-black text-white">
+            <h3 class="text-5xl  font-bold pb-4">បទចំរៀងថ្មីៗ</h3>
+            <h3 class="text-5xl  font-bold pb-4">សម្រាប់យុវជនសម័យថ្មី</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At aspernatur a vitae tenetur, numquam corporis
+                odio, quibusdam, ex quisquam accusantium architecto? Perspiciatis ex quos nisi repellendus ad. Delectus,
+                cum dolorum?</p>
+            <button></button>
+        </div>
+    </section>
+    <!-- end of hero -->
+
+    <!--  -->
+    <section class="my-36">
+        <div class="text-white flex justify-center items-center flex-col">
+            <div class="relative">
+                <input type="text" class=" w-[600px] p-3 rounded-lg mb-4" style="border:0.5px solid #cccccc76;" placeholder="ស្វែងរកសិល្បករ ក្រុមតន្រ្តី បទចម្រៀង និងផតខាស">
+                <span class="absolute" style="top:50%;right:20px;transform: translateY(-80%);">
+                    <i class="fa-solid fa-magnifying-glass text-red-100"></i>
+                </span>
+            </div>
+
+            <h2 class="text-3xl font-bold mt-5">ស្តាប់អ្វីដែលកំពុងពេញនិយមដោយឥតគិតថ្លៃនៅក្នុងសហគមន៍ Melodyz.</h2>
+            
+            <button class=" bg-white text-black font-semibold text-lg rounded-lg px-3 py-2 mt-7">រុករក​បញ្ជី​ចាក់​ដែល​កំពុង​ពេញ​និយម</button>
+        </div>
+    </section>
+    <!--  -->
+
+    <!--  -->
+    <section class="w-full h-[420px] my-10 bg-[url(https://a-v2.sndcdn.com/assets/images/hp_creator_image_featured_artists-798050ae.jpg)] flex justify-start items-center ps-[270px]">
+        <div class="text-white  w-[500px] p-3">
+            <h1 class="text-5xl font-bold mb-3">ហៅអ្នកបង្កើតទាំងអស់</h1>
+            <p class="text-lg mb-4">ចូលទៅកាន់ <span>Melodyz.</span> ដើម្បីភ្ជាប់ទំនាក់ទំនងជាមួយអ្នកគាំទ្រ ចែករំលែកសំឡេងរបស់អ្នក និងបង្កើនទស្សនិកជនរបស់អ្នក។ តើអ្នកកំពុងរង់ចាំអ្វីទៀត?</p>
+            <button class=" bg-white text-black font-semibold text-lg rounded-lg px-3 py-2">ស្វែងយល់បន្ថែម</button>
+        </div>
+    </section>
+    <!--  -->   
+
+    <!-- start of thank  -->
+    <section>
+        <div class="text-center text-white py-12">
+            <h3 class="text-3xl font-semibold mb-3">អរគុណសម្រាប់ការស្ដាប់តន្រ្តីរបស់ពួកយើង។ចូលរួមអីលូវនេះ។</h3>
+            <p class="text-base font-medium mb-3">រក្សាទុកបទចម្រៀង តាមដានសិល្បករ និងបង្កើតបញ្ជីចាក់។ ទាំងអស់នេះគឺឥតគិតថ្លៃ។</p>
+            <button class="bg-white rounded-lg text-black my-3 py-2 px-3 text-base font-semibold">បង្កើតគណនីអីលូវនេះ</button>
+            <p class="text-sm">
+                <span>Already have an account?</span>
+                <span><a href="#" class="underline text-blue-600">sign in</a></span>
+            </p>
+        </div>
+    </section>
+    <!-- end of thank  -->
+
+    <!-- start of footer navbar -->
+    <footer class="mx-[100px] py-[40px]">
+        <ul class="flex gap-3 text-white">
+            <li><a href="#" class="underline hover:no-underline hover:text-red-300">Home</a></li>
+            <li>.</li>
+            <li><a href="#" class="underline hover:no-underline hover:text-red-300">Song</a></li>
+            <li>.</li>
+            <li><a href="#" class="underline hover:no-underline hover:text-red-300">New Albums</a></li>
+            <li>.</li>
+            <li><a href="#" class="underline hover:no-underline hover:text-red-300">Contact</a></li>
+            <li>.</li>
+            <li><a href="#" class="underline hover:no-underline hover:text-red-300">About</a></li>
+        </ul>
+        <p class="text-white mt-4">Copyright@by Meng Sonly</p>
+    </footer>
+    <!-- end of footer navbar -->
+
+</body>
+
+</html>
