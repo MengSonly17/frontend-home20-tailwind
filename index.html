@@ -7,6 +7,7 @@
     <title>Tailwind</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/f30f0231eb.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
@@ -14,35 +15,60 @@
         * {
             font-family: "Kantumruy Pro", sans-serif;
         }
+
+        .hero-bg {
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: bg-animation 3s ease-in-out 0s infinite alternate;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes bg-animation {
+            from {
+                background-size: 110% 110%;
+                background-position: center;
+            }
+
+            to {
+                background-size: 100% 100%;
+                background-position: center;
+            }
+        }
     </style>
 </head>
 
 <body class="bg-black">
 
     <!-- start of navbar -->
-    <div class="navbar sticky top-0 bg-black">
-        <nav class="flex justify-between item-center px-6 py-4">
-            <a href="./day1.html" class="text-3xl font-semibold underline text-white hover:text-red-300">Melodyz.</a>
+    <div class="navbar sticky top-0  bg-black">
+        <nav class="flex justify-between item-center px-4 py-4 md:px-6 md:py-4">
+            <a href="./day1.html" class="text-2xl md:text-3xl font-semibold underline text-white hover:text-red-300">Melodyz.</a>
 
-            <ul class="flex justify-center items-center gap-5">
-                <li><a href="#" class="hover:underline hover:text-red-400 text-white">Home</a></li>
-                <li><a href="#" class="hover:underline hover:text-red-400 text-white">Song</a></li>
-                <li><a href="#" class="hover:underline hover:text-red-400 text-white">New Albums</a></li>
-                <li><a href="#" class="hover:underline hover:text-red-400 text-white">Contact</a></li>
-                <li><a href="#" class="hover:underline hover:text-red-400 text-white">About</a></li>
+            <a href="#" class="text-red-400 text-2xl">
+                <i class="fa-solid fa-burger"></i>
+            </a>
+
+            <ul class="hidden md:flex md:justify-center md:items-center md:gap-5">
+                <li><a href="#" class="text-[13px] md:text-[17px] hover:underline hover:text-red-400 text-white">Home</a></li>
+                <li><a href="#" class="text-[13px] md:text-[17px] hover:underline hover:text-red-400 text-white">Song</a></li>
+                <li><a href="#" class="text-[13px] md:text-[17px] hover:underline hover:text-red-400 text-white">New Albums</a></li>
+                <li><a href="#" class="text-[13px] md:text-[17px] hover:underline hover:text-red-400 text-white">Contact</a></li>
+                <li><a href="#about" class="hover:underline hover:text-red-400 text-white">About</a></li>
             </ul>
         </nav>
     </div>
     <!-- end of navbar -->
 
     <!-- start of hero  -->
-    <section class="w-full h-[570px] px-6 bg-[url(https://plus.unsplash.com/premium_photo-1661963052800-6e6b2aeea937?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]
+    <section class="hero-bg w-full h-[600px] px-6 bg-[url(https://plus.unsplash.com/premium_photo-1661963052800-6e6b2aeea937?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]
             bg-no-repeat bg-size-[100%_100%] bg-cover
             flex justify-start items-center
         ">
-        <div class="w-[500px] ms-[80px] p-[20px] rounded-lg bg-black text-white">
-            <h3 class="text-5xl  font-bold pb-4">បទចំរៀងថ្មីៗ</h3>
-            <h3 class="text-5xl  font-bold pb-4">សម្រាប់យុវជនសម័យថ្មី</h3>
+        <div class="md:w-[500px] p-4 rounded-sm md:ms-[80px] md:p-[20px] md:rounded-lg bg-gray-500 md:bg-black text-white">
+            <h3 class="text-2xl mb-3 font-semibold md:text-5xl  md:font-bold md:pb-4">បទចំរៀងថ្មីៗ</h3>
+            <h3 class="text-2xl mb-3 font-semibold md:text-5xl md:font-bold md:pb-4">សម្រាប់យុវជនសម័យថ្មី</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At aspernatur a vitae tenetur, numquam corporis
                 odio, quibusdam, ex quisquam accusantium architecto? Perspiciatis ex quos nisi repellendus ad. Delectus,
                 cum dolorum?</p>
@@ -51,39 +77,88 @@
     </section>
     <!-- end of hero -->
 
+    <h1 class="text-white text-2xl md:text-4xl ms-2 mt-6 md:font-bold md:mt-[50px] md:ms-[30px] lg:mt-[50px] lg:ms-[200px]">
+        Featured <span class="text-red-500 ">Artists</span>
+    </h1>
+    <p class="text-gray-400 md:ms-[30px] ms-2 mt-2 md:mt-[10px] lg:ms-[200px] lg:mt-[20px]">Discover the hottest artists on our platform right now</p>
+    <div class="container w-full grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 md:gap-x-3 md:gap-y-4 lg:gap-3 mx-auto my-5 md:p-3 md:my-3 lg:w-[1200px] lg:my-10 lg:py-10 ">
+        <div class="card ">
+            <img class="w-full h-[300px] object-cover" src="https://thesummitwellnessgroup.com/wp-content/uploads/2024/06/Eminem-1024x1024.jpeg" alt="">
+            <div class="p-3">
+                <h3 class="text-xl md:text-2xl mb-[6px] font-semibold text-white">Eminem</h3>
+                <p class="text-sm mb-[6px] font-extralight text-yellow-50">Mockingbird</p>
+                <h6 class="text-sm font-semibold text-red-600">1.3B followers</h6>
+            </div>
+        </div>
+        <div class="card ">
+            <img class="w-full h-[300px] object-cover" 
+            src="https://cdn-images.dzcdn.net/images/artist/2bc1657460a1572de977106fcdc1d2c1/1900x1900-000000-81-0-0.jpg" alt="">
+            <div class="p-3">
+                <h3 class="text-xl md:text-2xl mb-[6px] font-semibold text-white">Eazy-E</h3>
+                <p class="text-sm mb-[6px] font-extralight text-yellow-50">Real Muthaphuckkin G's</p>
+                <h6 class="text-sm font-semibold text-red-600">432M followers</h6>
+            </div>
+        </div>
+        <div class="card ">
+            <img class="w-full h-[300px] object-cover" 
+            src="https://upload.wikimedia.org/wikipedia/commons/c/cc/KendrickSZASPurs230725-144_%28cropped%29.jpg" alt="">
+            <div class="p-3">
+                <h3 class="text-xl mb-[6px] md:text-2xl font-semibold text-white">Kendric Lamar</h3>
+                <p class="text-sm mb-[6px] font-extralight text-yellow-50">Not Like Us</p>
+                <h6 class="text-sm font-semibold text-red-600">419M followers</h6>
+            </div>
+        </div>
+        <div class="card ">
+            <img class="w-full h-[300px] object-cover" 
+            src=" https://i.scdn.co/image/dd031b9c5d1b6eba4a691cd89c954255aae787f2" alt="">
+            <div class="p-3">
+                <h3 class="text-xl mb-[6px] md:text-2xl font-semibold text-white">50 Cent</h3>
+                <p class="text-sm mb-[6px] font-extralight text-yellow-50">Candy Shop</p>
+                <h6 class="text-sm font-semibold text-red-600">1.1B followers</h6>
+            </div>
+        </div>
+    </div>
+
     <!--  -->
-    <section class="my-36">
+    <section class="py-6 md:my-36">
         <div class="text-white flex justify-center items-center flex-col">
             <div class="relative">
-                <input type="text" class=" w-[600px] p-3 rounded-lg mb-4" style="border:0.5px solid #cccccc76;" placeholder="ស្វែងរកសិល្បករ ក្រុមតន្រ្តី បទចម្រៀង និងផតខាស">
-                <span class="absolute" style="top:50%;right:20px;transform: translateY(-80%);">
+                <input type="text" class="w-full text-sm md:text-xl md:w-[600px] p-3 rounded-lg mb-4" style="border:0.5px solid #cccccc76;"
+                    placeholder="ស្វែងរកសិល្បករ ក្រុមតន្រ្តី បទចម្រៀង និងផតខាស">
+                <span class="absolute md-block" style="top:50%;right:20px;transform: translateY(-80%);">
                     <i class="fa-solid fa-magnifying-glass text-red-100"></i>
                 </span>
             </div>
 
-            <h2 class="text-3xl font-bold mt-5">ស្តាប់អ្វីដែលកំពុងពេញនិយមដោយឥតគិតថ្លៃនៅក្នុងសហគមន៍ Melodyz.</h2>
-            
-            <button class=" bg-white text-black font-semibold text-lg rounded-lg px-3 py-2 mt-7">រុករក​បញ្ជី​ចាក់​ដែល​កំពុង​ពេញ​និយម</button>
+            <h2 class="text-center mx-3 px-3 md:text-3xl font-bold mt-5 ">ស្តាប់អ្វីដែលកំពុងពេញនិយមដោយឥតគិតថ្លៃនៅក្នុងសហគមន៍ Melodyz.</h2>
+
+            <button
+                class=" bg-white text-black font-semibold text-sm md:text-lg rounded-lg px-3 py-2 mt-7 hover:cursor-pointer">រុករក​បញ្ជី​ចាក់​ដែល​កំពុង​ពេញ​និយម</button>
         </div>
     </section>
     <!--  -->
 
     <!--  -->
-    <section class="w-full h-[420px] my-10 bg-[url(https://a-v2.sndcdn.com/assets/images/hp_creator_image_featured_artists-798050ae.jpg)] flex justify-start items-center ps-[270px]">
-        <div class="text-white  w-[500px] p-3">
-            <h1 class="text-5xl font-bold mb-3">ហៅអ្នកបង្កើតទាំងអស់</h1>
-            <p class="text-lg mb-4">ចូលទៅកាន់ <span>Melodyz.</span> ដើម្បីភ្ជាប់ទំនាក់ទំនងជាមួយអ្នកគាំទ្រ ចែករំលែកសំឡេងរបស់អ្នក និងបង្កើនទស្សនិកជនរបស់អ្នក។ តើអ្នកកំពុងរង់ចាំអ្វីទៀត?</p>
-            <button class=" bg-white text-black font-semibold text-lg rounded-lg px-3 py-2">ស្វែងយល់បន្ថែម</button>
+    <section 
+        class=" w-full p-6 md:p-0 md:h-[420px] bg-red-400 my-10 md:bg-[url(https://a-v2.sndcdn.com/assets/images/hp_creator_image_featured_artists-798050ae.jpg)] flex justify-start items-center md:ps-[270px]">
+        <div class="text-white  w-[500px] p-3" data-aos="zoom-in">
+            <h1 class="text-xl md:text-5xl font-bold mb-3">ហៅអ្នកបង្កើតទាំងអស់</h1>
+            <p class="text-sm md:text-lg mb-4">ចូលទៅកាន់ <span>Melodyz.</span> ដើម្បីភ្ជាប់ទំនាក់ទំនងជាមួយអ្នកគាំទ្រ
+                ចែករំលែកសំឡេងរបស់អ្នក និងបង្កើនទស្សនិកជនរបស់អ្នក។ តើអ្នកកំពុងរង់ចាំអ្វីទៀត?</p>
+            <button
+                class=" bg-white text-black md:font-semibold text-sm md:text-lg rounded-lg px-2 py-2 md:px-3 md:py-2 hover:cursor-pointer">ស្វែងយល់បន្ថែម</button>
         </div>
     </section>
-    <!--  -->   
+    <!--  -->
 
     <!-- start of thank  -->
     <section>
-        <div class="text-center text-white py-12">
-            <h3 class="text-3xl font-semibold mb-3">អរគុណសម្រាប់ការស្ដាប់តន្រ្តីរបស់ពួកយើង។ចូលរួមអីលូវនេះ។</h3>
-            <p class="text-base font-medium mb-3">រក្សាទុកបទចម្រៀង តាមដានសិល្បករ និងបង្កើតបញ្ជីចាក់។ ទាំងអស់នេះគឺឥតគិតថ្លៃ។</p>
-            <button class="bg-white rounded-lg text-black my-3 py-2 px-3 text-base font-semibold">បង្កើតគណនីអីលូវនេះ</button>
+        <div class="text-center text-white md:py-12  px-4 py-5">
+            <h3 class="text-[17px] md:text-3xl font-semibold mb-2 md:mb-3">អរគុណសម្រាប់ការស្ដាប់តន្រ្តីរបស់ពួកយើង។ចូលរួមអីលូវនេះ។</h3>
+            <p class="text-[12px] md:font-medium px-4 md:p-0 mb-2 md:mb-3">រក្សាទុកបទចម្រៀង តាមដានសិល្បករ និងបង្កើតបញ្ជីចាក់។
+                ទាំងអស់នេះគឺឥតគិតថ្លៃ។</p>
+            <button
+                class="bg-white rounded-lg text-black my-3 py-2 px-3 text-base font-semibold hover:cursor-pointer">បង្កើតគណនីអីលូវនេះ</button>
             <p class="text-sm">
                 <span>Already have an account?</span>
                 <span><a href="#" class="underline text-blue-600">sign in</a></span>
@@ -93,21 +168,28 @@
     <!-- end of thank  -->
 
     <!-- start of footer navbar -->
-    <footer class="mx-[100px] py-[40px]">
-        <ul class="flex gap-3 text-white">
-            <li><a href="#" class="underline hover:no-underline hover:text-red-300">Home</a></li>
+    <footer class="p-4 md:mx-[100px] md:py-[40px" id="about">
+        <ul class="flex gap-1 md:gap-3 text-white ">
+            <li><a href="#" class="text-sm md:text-base underline hover:no-underline hover:text-red-300">Home</a></li>
             <li>.</li>
-            <li><a href="#" class="underline hover:no-underline hover:text-red-300">Song</a></li>
+            <li><a href="#" class="text-sm md:text-base underline hover:no-underline hover:text-red-300">Song</a></li>
             <li>.</li>
-            <li><a href="#" class="underline hover:no-underline hover:text-red-300">New Albums</a></li>
+            <li><a href="#" class="text-sm md:text-base underline hover:no-underline hover:text-red-300">New Albums</a></li>
             <li>.</li>
-            <li><a href="#" class="underline hover:no-underline hover:text-red-300">Contact</a></li>
+            <li><a href="#" class="text-sm md:text-base underline hover:no-underline hover:text-red-300">Contact</a></li>
             <li>.</li>
-            <li><a href="#" class="underline hover:no-underline hover:text-red-300">About</a></li>
+            <li><a href="#" class="text-sm md:text-base underline hover:no-underline hover:text-red-300">About</a></li>
         </ul>
-        <p class="text-white mt-4">Copyright@by Meng Sonly</p>
+        <p class="text-white mt-3 text-sm md:text-base md:mt-4">Copyright@by Meng Sonly</p>
     </footer>
     <!-- end of footer navbar -->
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
